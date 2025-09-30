@@ -1,0 +1,181 @@
+/* ============================================== */
+/* ========= ESTILOS PÁGINA Z.RESIDÊNCIA ========= */
+/* ============================================== */
+
+.residencia-hero-section {
+    background-color: #0d218a;
+    color: #fff;
+    padding-bottom: 10rem;
+    /* Curva na parte inferior */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.residencia-hero-section .main-header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.residencia-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.residencia-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.residencia-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.residencia-content .btn {
+    margin-bottom: 1.5rem;
+}
+
+.residencia-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.residencia-image-wrapper img {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* ================================================= */
+/* ========= SEÇÃO BENEFÍCIOS Z.RESIDÊNCIA ========= */
+/* ================================================= */
+
+.residencia-benefits-section {
+    padding: 6rem 0;
+    background-color: #fff;
+    color: var(--primary-blue);
+    text-align: center;
+}
+
+.residencia-benefits-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.benefits-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Cor de destaque marrom/terracota sugerida no HTML */
+.benefit-tag-brown {
+    display: inline-block;
+    background-color: #b91c1c; /* Vermelho/Marrom Escuro */
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.residencia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.benefit-card-residencia {
+    background-color: #f3f4f6; /* Cinza claro */
+    text-align: left;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.benefit-card-residencia:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-5px);
+}
+
+.benefit-card-residencia svg {
+    color: #b91c1c; /* Cor de destaque para os ícones */
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.benefit-card-residencia h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #0d218a;
+}
+
+.benefit-card-residencia p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+@media (max-width: 1024px) {
+    .residencia-grid {
+        grid-template-columns: repeat(2, 1fr); /* Muda para 2 colunas */
+    }
+}
+
+@media (max-width: 950px) {
+    .residencia-hero-section {
+        padding-bottom: 6rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    }
+
+    .residencia-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .residencia-content {
+        max-width: 100%;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .residencia-image-wrapper {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+    .residencia-image-wrapper img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .residencia-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .residencia-benefits-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .residencia-grid {
+        grid-template-columns: 1fr; /* Muda para 1 coluna em telas muito pequenas */
+    }
+    .benefit-card-residencia {
+        text-align: center;
+    }
+    .benefit-card-residencia svg {
+        margin: 0 auto 1rem auto;
+    }
+}

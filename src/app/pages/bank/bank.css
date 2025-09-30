@@ -1,0 +1,369 @@
+/* ================================================= */
+/* ========= ESTILOS PÁGINA ZBANK ========= */
+/* ================================================= */
+
+.zbank-page-container {
+    background-color: #fff;
+}
+
+/* --- Hero Section Comum --- */
+
+.zbank-hero-section,
+.zvida-hero-section {
+    background-color: #0d218a;
+    color: #fff;
+    padding-bottom: 10rem;
+    /* Curva na parte inferior (clip-path) */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.zbank-hero-section .main-header,
+.zvida-hero-section .main-header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.zbank-wrapper,
+.zvida-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.zbank-content,
+.zvida-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.service-tag.dark-bg {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 9999px;
+    display: inline-flex;
+    padding: 0.6rem 1.2rem;
+    gap: 0.5rem;
+    align-items: center;
+    font-weight: 500;
+}
+
+.zbank-content h2,
+.zvida-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Z.Bank Específico */
+.zbank-content .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+    max-width: 450px;
+}
+
+/* Z.Bank Específico */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-light-blue {
+    background-color: #3b82f6;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.btn-light-blue:hover {
+    background-color: #2563eb;
+}
+
+.activation-note {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    max-width: 250px;
+    line-height: 1.5;
+}
+
+.zbank-image-wrapper,
+.zvida-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.zbank-image-wrapper img,
+.zvida-image-wrapper img {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* ============================================= */
+/* ========= ESTILOS BENEFÍCIOS Z.BANK ========= */
+/* ============================================= */
+
+.zbank-benefits-section {
+    padding: 6rem 0;
+    background-color: #fff;
+}
+
+.zbank-benefits-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.zbank-benefits-content {
+    flex: 1;
+    max-width: 50%;
+    color: var(--primary-blue);
+}
+
+.zbank-benefits-content h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+}
+
+.benefit-tag {
+    background-color: #0d218a;
+    color: #fff;
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.benefits-grid { /* Usado em Z.Bank */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.benefit-item {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.zbank-benefits-image-area {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-background-blob {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #818CF8, #4ADE80);
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.app-image {
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
+}
+
+/* ============================================= */
+/* ========= SEÇÃO BENEFÍCIOS Z.VIDA (DIFERENTE) ========= */
+/* ============================================= */
+
+.zvida-benefits-section {
+    padding: 6rem 0;
+    background-color: #fff;
+    color: var(--primary-blue);
+    text-align: center;
+}
+
+.benefits-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.benefit-tag-cyan {
+    display: inline-block;
+    background-color: #06b6d4; /* Exemplo de Ciano (usando a variável seria melhor) */
+    color: var(--primary-blue);
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.zvida-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.benefit-item-gray {
+    background-color: #f3f4f6; /* Cinza claro */
+    color: var(--primary-blue);
+    padding: 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    font-weight: 600;
+}
+/* ======================================= */
+/* ========= ESTILOS SEÇÃO CARTÃO Z.BANK ======== */
+/* ======================================= */
+
+.zbank-card-section {
+    padding: 6rem 0;
+    background-color: #f8f9fa; /* Fundo cinza bem claro */
+    text-align: center;
+}
+
+.zbank-card-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+.card-image-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image-area img {
+    width: 100%;
+    max-width: 450px;
+    height: 500px;
+    object-fit: cover;
+    /* Forma de "folha" ou "escudo" */
+    clip-path: path('M 225,500 C 380,500 450,388.07 450,250 C 450,111.93 380,0 225,0 C 70,0 0,111.93 0,250 C 0,388.07 70,500 225,500 Z');
+}
+
+.card-benefits-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.app-download-section p {
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.app-stores {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.app-stores a img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.app-stores a:hover img {
+    transform: scale(1.05);
+}
+/* ============================================= */
+/* ========= RESPONSIVIDADE Z.BANK & Z.VIDA ========= */
+/* ============================================= */
+
+@media (max-width: 950px) {
+    /* --- HERO/WRAPPER COMUM --- */
+    .zbank-hero-section,
+    .zvida-hero-section {
+        padding-bottom: 6rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    }
+
+    .zbank-wrapper,
+    .zvida-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .zbank-content,
+    .zvida-content {
+        max-width: 100%;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zbank-image-wrapper,
+    .zvida-image-wrapper {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+    .zbank-image-wrapper img,
+    .zvida-image-wrapper img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .zbank-content h2,
+    .zvida-content h2 {
+        font-size: 2.5rem;
+    }
+
+    /* --- RESPONSIVIDADE Z.BANK --- */
+    .button-group {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .zbank-benefits-wrapper {
+        flex-direction: column-reverse; /* Imagem vem primeiro */
+        text-align: center;
+    }
+    .zbank-benefits-content h2 {
+        font-size: 1.75rem;
+    }
+    .zbank-card-wrapper {
+        flex-direction: column;
+    }
+    .card-image-area img {
+        width: 400px;
+        height: 400px;
+        clip-path: circle(50% at 50% 50%); /* Círculo completo em telas menores */
+    }
+
+    /* --- RESPONSIVIDADE Z.VIDA --- */
+    .zvida-benefits-grid {
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+    }
+}
+
+@media (max-width: 640px) {
+    .benefits-grid { /* Z.Bank grid */
+        grid-template-columns: 1fr;
+    }
+}
+

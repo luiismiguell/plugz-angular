@@ -1,0 +1,211 @@
+/* ======================================= */
+/* ========= VARIÁVEIS E GLOBAIS ========= */
+/* ======================================= */
+
+:root {
+    /* Cores Principais */
+    --primary-blue: #0d218a;        /* Azul Escuro Principal */
+    --accent-blue: #3b82f6;         /* Azul de Destaque/Acento */
+    --white: #fff;
+    --text-gray: #d1d5db;           /* Cinza para texto em fundo escuro */
+    --text-dark: #374151;           /* Cinza escuro para corpo de texto em fundo claro */
+
+    /* Fundos e Bordas */
+    --card-bg: rgba(255, 255, 255, 0.05); /* Fundo sutil para cards (fundo escuro) */
+    --card-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    background-color: var(--primary-blue);
+    line-height: 1.5;
+}
+
+/* Links globais */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Container Padrão --- */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+/* ======================================= */
+/* ========= UTILITIES E BOTÕES ========== */
+/* ======================================= */
+
+/* --- Botões de Ação (Comuns) --- */
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-blue);
+}
+
+.btn-solid {
+    background-color: var(--white);
+    color: var(--primary-blue);
+}
+.btn-solid:hover {
+    background-color: var(--text-gray);
+}
+
+.btn-gradient {
+    background-image: linear-gradient(to right, #6D28D9, #4F46E5); /* Roxo para Azul */
+    color: var(--white);
+    border: none;
+}
+.btn-gradient:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Texto --- */
+h1, h2, h3, h4 {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+.main-content h1, .main-content h2, .main-content h3 {
+    /* Garante que o texto nas seções de conteúdo use a cor correta */
+    color: var(--primary-blue);
+}
+/* ======================================= */
+/* ========= LAYOUT PRINCIPAL (APP) ====== */
+/* ======================================= */
+
+/* --- HEADER --- */
+.main-header {
+    padding: 1.5rem 0;
+    background-color: var(--primary-blue);
+    position: sticky;
+    top: 0;
+    z-index: 50; /* Garante que fique acima de outros elementos */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navegação (Menu Simples no App.html) */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--white);
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+    /* Altura mínima para garantir que o footer esteja sempre no final da tela */
+    min-height: calc(100vh - 200px); /* Ajuste com base na altura do seu header e footer */
+    position: relative;
+    z-index: 10;
+}
+
+/* --- FOOTER --- */
+/* (Estilos detalhados já foram fornecidos em `footer.css`, aqui está a base) */
+.main-footer-wrapper {
+    background-color: #0b157a;
+    color: #fff;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+    margin-top: -100px;
+    padding-top: 150px;
+    position: relative;
+    z-index: 5;
+}
+/* ======================================= */
+/* ========= RESPONSIVIDADE GERAL ======== */
+/* ======================================= */
+
+@media (max-width: 950px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Footer */
+    .main-footer-wrapper {
+        clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+        margin-top: -50px;
+        padding-top: 80px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header (Oculta o menu de navegação) */
+    .nav-menu {
+        display: none;
+    }
+
+    /* Footer CTA e Bottom */
+    .footer-cta-content, .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+
+    .header-actions {
+        gap: 0.5rem;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}

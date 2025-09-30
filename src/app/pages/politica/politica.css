@@ -1,0 +1,123 @@
+/* ========================================= */
+/* ========= ESTILOS PÁGINA POLÍTICA ========= */
+/* ========================================= */
+
+.policy-page-container {
+    background-color: #fff;
+    color: var(--primary-blue);
+    min-height: 100vh;
+}
+
+/* O header de navegação deve usar os estilos globais (main-header) */
+
+/* --- Título Principal --- */
+.policy-hero-section {
+    padding: 6rem 0 4rem 0;
+    background-color: #f8f9fa; /* Fundo cinza claro para destacar o cabeçalho */
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.policy-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.policy-hero-section .last-updated {
+    font-size: 1rem;
+    color: #4b5563;
+}
+/* --- Área de Conteúdo --- */
+.policy-content-section {
+    padding: 4rem 0 6rem 0;
+}
+
+.policy-container {
+    max-width: 800px; /* Limita a largura do texto para melhor leitura */
+    margin: 0 auto;
+    line-height: 1.7; /* Aumenta a altura da linha para melhor legibilidade */
+}
+
+/* --- Títulos de Seções (H2) --- */
+.policy-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d218a; /* Azul principal */
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+/* --- Subtítulos de Seções (H3) --- */
+.policy-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-blue); /* Azul de destaque */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Parágrafos --- */
+.policy-container p {
+    margin-bottom: 1.5rem;
+    color: #374151; /* Tom de cinza escuro para o corpo do texto */
+}
+
+/* --- Listas --- */
+.policy-container ul,
+.policy-container ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    color: #374151;
+}
+
+.policy-container ul li,
+.policy-container ol li {
+    margin-bottom: 0.5rem;
+}
+
+/* Destaca termos importantes */
+.policy-container strong {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Link para contato no final */
+.policy-contact-link {
+    display: inline-block;
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 2rem;
+}
+
+.policy-contact-link:hover {
+    color: var(--accent-blue);
+}
+@media (max-width: 768px) {
+    .policy-hero-section {
+        padding: 4rem 0 3rem 0;
+    }
+    .policy-hero-section h1 {
+        font-size: 2.25rem;
+    }
+    .policy-content-section {
+        padding: 2rem 0 4rem 0;
+    }
+    .policy-container {
+        padding: 0 1rem;
+    }
+    .policy-container h2 {
+        font-size: 1.5rem;
+    }
+    .policy-container h3 {
+        font-size: 1.25rem;
+    }
+    .policy-container p,
+    .policy-container ul,
+    .policy-container ol {
+        font-size: 0.95rem;
+    }
+}

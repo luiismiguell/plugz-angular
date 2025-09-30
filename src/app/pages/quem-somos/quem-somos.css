@@ -1,0 +1,220 @@
+/* ======================================= */
+/* ========= ESTILOS PÁGINA QUEM SOMOS ========= */
+/* ======================================= */
+
+.about-page-container {
+    background-color: #fff;
+    color: var(--primary-blue);
+}
+
+.about-hero-section {
+    padding: 8rem 0 6rem 0;
+    background-color: #0d218a; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+}
+
+.about-hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-hero-section p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+/* --- Seção de MVV (Missão, Visão, Valores) --- */
+.mvv-section {
+    padding: 6rem 0;
+    background-color: #f8f9fa; /* Fundo cinza claro */
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.mvv-item {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.mvv-item:hover {
+    transform: translateY(-5px);
+}
+
+.mvv-item svg {
+    color: var(--accent-blue); /* Azul de destaque */
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.mvv-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0d218a;
+}
+
+.mvv-item p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+/* --- Seção da História (Timeline) --- */
+.history-section {
+    padding: 6rem 0;
+}
+
+.history-wrapper {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.history-content {
+    flex: 1;
+    max-width: 55%;
+}
+
+.history-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #0d218a;
+}
+
+.history-content p {
+    color: #374151;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.history-image-wrapper {
+    flex: 1;
+    max-width: 45%;
+    position: sticky; /* Imagem fixa ao lado do texto de rolagem */
+    top: 50px;
+}
+
+.history-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+/* --- Seção do Time (Time) --- */
+.team-section {
+    padding: 6rem 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    color: #0d218a;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-member-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.member-photo {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member-card:hover .member-photo img {
+    transform: scale(1.05);
+}
+
+.member-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0d218a;
+    margin-bottom: 0.25rem;
+}
+
+.member-role {
+    font-size: 0.9rem;
+    color: #4b5563;
+    font-style: italic;
+}
+@media (max-width: 1024px) {
+    .mvv-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .about-hero-section p {
+        font-size: 1rem;
+    }
+    /* MVV */
+    .mvv-grid {
+        grid-template-columns: 1fr; /* 1 coluna */
+    }
+    /* História */
+    .history-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .history-content, .history-image-wrapper {
+        max-width: 100%;
+        position: static;
+    }
+    .history-content h2, .team-section h2 {
+        font-size: 2rem;
+    }
+    /* Time */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+@media (max-width: 500px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+}

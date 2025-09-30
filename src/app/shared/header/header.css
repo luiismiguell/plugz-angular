@@ -1,0 +1,157 @@
+/* ======================================= */
+/* ========= ESTILOS DO HEADER =========== */
+/* ======================================= */
+
+/* A cor de fundo principal deve vir do body ou da seção hero,
+   mas o header precisa garantir o espaçamento */
+.main-header {
+    padding-top: 2rem;
+    padding-bottom: 0; /* Padding inferior é dado pela hero section */
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Logo --- */
+.logo svg {
+    display: block;
+}
+
+/* --- Links de Navegação (Menu) --- */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem; /* Espaço maior entre os itens principais */
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--text-gray); /* Cor clara para fundo escuro */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.5rem 0; /* Ajuda na área de clique */
+}
+
+.nav-links a:hover {
+    color: var(--white);
+}
+
+/* --- Dropdown Menu (Z.benefícios) --- */
+.nav-item-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Começa abaixo do link "Z.benefícios" */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o menu dropdown */
+    min-width: 180px;
+    background-color: var(--card-bg); /* Fundo escuro sutil para o dropdown */
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    list-style: none;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    margin-top: 10px; /* Pequeno espaçamento vertical */
+}
+
+/* Mostra o dropdown ao passar o mouse */
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li a {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Garante que o texto não quebre */
+    color: var(--text-gray);
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+/* --- Botões de Ação (CTA) --- */
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Os estilos .btn, .btn-outline, e .btn-solid devem ser globais,
+   mas estão incluídos aqui para referência de uso */
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Garante que 'a' com classe btn não tenha underline */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-blue);
+}
+
+.btn-solid {
+    background-color: var(--white);
+    color: var(--primary-blue);
+}
+.btn-solid:hover {
+    background-color: var(--text-gray);
+}
+
+/* ======================================= */
+/* ========= RESPONSIVIDADE HEADER ======= */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .main-nav {
+        /* Permite que o logo e os botões se ajustem */
+        justify-content: space-between;
+    }
+    .nav-links {
+        /* Esconde a navegação principal em telas pequenas (geralmente substituída por um menu hamburger) */
+        display: none;
+    }
+    .nav-buttons .btn-outline {
+        /* Esconde o botão de cadastro secundário para dar mais espaço */
+        display: none;
+    }
+    /* Se você fosse implementar um menu mobile, a classe .nav-links seria reexibida aqui
+       com flex-direction: column e posição absoluta */
+}
+
+@media (max-width: 480px) {
+    .nav-buttons {
+        gap: 0.5rem;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}

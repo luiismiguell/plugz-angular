@@ -1,13 +1,52 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>Plugz</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plug.Z | Sua Assinatura de Benefícios Inteligentes</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <meta name="description" content="Plug.Z oferece uma assinatura de benefícios com serviços inteligentes e soluções financeiras para o seu dia-a-dia.">
+    <meta property="og:title" content="Plug.Z | Assinatura de Benefícios">
+    <meta property="og:description" content="Descontos, serviços e soluções financeiras que fazem o seu salário render mais.">
+    <meta property="og:type" content="website">
 </head>
 <body>
-  <app-root></app-root>
+
+    <app-root>
+        <div class="loading-message">
+            <p>Carregando Plug.Z...</p>
+        </div>
+    </app-root>
+
+    <div class="mouse-glow"></div>
+
+    <div class="modal-overlay" id="login-modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="login-modal-close" aria-label="Fechar Modal">&times;</button>
+            <h3>Acesso Plug.Z</h3>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-gradient btn-full-width">ENTRAR</button>
+            </form>
+            <p class="modal-footer-text">Não tem conta? <a href="/quero-ser">Cadastre-se agora.</a></p>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+
 </body>
 </html>

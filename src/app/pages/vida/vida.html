@@ -1,0 +1,77 @@
+<body>
+
+    <div class="zvida-page-container">
+        <!-- A seção de herói azul engloba o cabeçalho e o conteúdo principal -->
+        <section class="zvida-hero-section">
+            <div class="container">
+                <!-- 1. Cabeçalho Padrão -->
+                <header class="main-header">
+                    <nav class="main-nav">
+                        <div class="logo">
+                            <a routerLink="/home">
+                                <svg width="112" height="36" viewBox="0 0 112 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs><linearGradient id="logo-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5B21B6"/><stop offset="100%" stop-color="#4ADE80"/></linearGradient></defs>
+                                    <text x="0" y="27" font-family="Poppins, sans-serif" font-size="28" font-weight="500" fill="white">plug</text>
+                                    <g transform="translate(72 0)"><rect width="36" height="36" rx="10" fill="url(#logo-gradient)"/><text x="9" y="27" font-family="Poppins, sans-serif" font-size="24" font-weight="700" fill="white">Z</text></g>
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="nav-links">
+                            <li><a routerLink="/quem-somos">Quem Somos</a></li>
+                            <!-- ===== MENU DROPDOWN APLICADO AQUI ===== -->
+                            <li class="nav-item-dropdown">
+                                <a routerLink="/#">Z.benefícios</a>
+                                <ul class="dropdown-menu">
+                                    <li><a routerLink="/zbank">Z.Bank</a></li>
+                                    <li><a routerLink="/zfarma">Z.Farma</a></li>
+                                    <li><a routerLink="/zvida">Z.Vida</a></li>
+                                    <li><a routerLink="/zresidencia">Z.Residência</a></li>
+                                    <li><a routerLink="/zprotecao">Z.Proteção</a></li>
+                                </ul>
+                            </li>
+                            <!-- ===================================== -->
+
+                            <li><a routerLink="/zparceiros">Z.Parceiros</a></li>
+                        </ul>
+                        <div class="nav-buttons">
+                            <a routerLink="/quem-somos" class="btn btn-outline">Quero ser Plug.Z</a>
+                            <button class="btn btn-solid">Fazer Login</button>
+                        </div>
+                    </nav>
+                </header>
+
+                <!-- 2. Conteúdo do Herói -->
+                <div class="zvida-wrapper">
+                    <div class="zvida-content">
+                        <span class="service-tag dark-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Z.Vida
+                        </span>
+                        <h2>Seguro Sulamérica para o titular da assinatura</h2>
+                        <button class="btn btn-gradient">COMECE JÁ</button>
+                        <p class="activation-note">A ativação será concluída em até 2 dias úteis após a confirmação da assinatura.</p>
+                    </div>
+                    <div class="zvida-image-wrapper">
+                        <!-- Substitua pela imagem do homem de negócios -->
+                        <img src="imgs/z-vida/zvida.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outras seções da página Z.Vida podem ser adicionadas aqui -->
+        <!-- ============================================= -->
+    <!-- ========= INÍCIO DA SEÇÃO BENEFÍCIOS Z.VIDA ========= -->
+    <!-- ============================================= -->
+    <section class="zvida-benefits-section">
+        <div class="container">
+            <div class="benefits-container">
+                <span class="benefit-tag-cyan">Benefícios</span>
+                <div class="zvida-benefits-grid">
+                    <div class="benefit-item-gray">Morte Acidental</div>
+                    <div class="benefit-item-gray">Invalidez por Acidente</div>
+                    <div class="benefit-item-gray">Seguro Assistência Funeral - Familiar</div>
+                </div>
+            </div>
+        </div>
+    </section>

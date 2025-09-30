@@ -1,0 +1,132 @@
+/* =========================================== */
+/* ========= ESTILOS PÁGINA PROTEÇÃO DE DADOS ========= */
+/* =========================================== */
+
+.protection-page-container {
+    background-color: #fff;
+    color: var(--primary-blue);
+    min-height: 100vh;
+}
+
+/* --- Título Principal --- */
+.protection-hero-section {
+    padding: 6rem 0 4rem 0;
+    /* Usa o azul principal, mas mais claro, para o hero */
+    background-color: #f0f4ff;
+    text-align: center;
+    border-bottom: 1px solid #c7d2fe;
+}
+
+.protection-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0d218a; /* Azul principal */
+}
+
+.protection-hero-section .subtitle {
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* --- Área de Conteúdo --- */
+.protection-content-section {
+    padding: 4rem 0 6rem 0;
+}
+
+.protection-container {
+    max-width: 800px; /* Limita a largura do texto para melhor leitura */
+    margin: 0 auto;
+    line-height: 1.7; /* Aumenta a altura da linha */
+}
+
+/* --- Títulos de Seções (H2) --- */
+.protection-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d218a; /* Azul principal */
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+/* --- Subtítulos de Seções (H3) --- */
+.protection-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-blue); /* Azul de destaque */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Parágrafos --- */
+.protection-container p {
+    margin-bottom: 1.5rem;
+    color: #374151;
+}
+
+/* --- Listas de Direitos/Princípios --- */
+.protection-container ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    list-style: none; /* Remove a bolinha padrão */
+}
+
+.protection-container ul li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* Cria um ícone de checkmark customizado para a lista de direitos */
+.protection-container ul li::before {
+    content: '✓';
+    color: #10b981; /* Verde de sucesso */
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Destaque para termos importantes */
+.protection-container strong {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Bloco de citação ou nota de rodapé */
+.note-box {
+    background-color: #e0f2fe; /* Azul muito claro */
+    border-left: 5px solid #3b82f6; /* Azul forte na lateral */
+    padding: 1.5rem;
+    margin: 2.5rem 0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #0d218a;
+}
+@media (max-width: 768px) {
+    .protection-hero-section {
+        padding: 4rem 0 3rem 0;
+    }
+    .protection-hero-section h1 {
+        font-size: 2.25rem;
+    }
+    .protection-content-section {
+        padding: 2rem 0 4rem 0;
+    }
+    .protection-container {
+        padding: 0 1rem;
+    }
+    .protection-container h2 {
+        font-size: 1.5rem;
+    }
+    .protection-container h3 {
+        font-size: 1.25rem;
+    }
+    .protection-container p,
+    .protection-container ul {
+        font-size: 0.95rem;
+    }
+}

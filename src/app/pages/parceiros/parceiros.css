@@ -1,0 +1,203 @@
+/* ==================================== */
+/* ========= ESTILOS PARCEIROS ======== */
+/* ==================================== */
+
+.partners-section {
+    background-color: #fff;
+    padding: 4rem 0 6rem 0; /* Espaçamento vertical */
+    border-top: 1px solid #e5e7eb; /* Linha sutil de separação */
+}
+
+.partners-title {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 1.75rem;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.partners-title strong {
+    font-weight: 700;
+}
+
+/* Animação de rolagem contínua */
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+.logo-scroller {
+    overflow: hidden;
+    /* Efeito de fade nas laterais para indicar rolagem contínua */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-scroller .logo-list {
+    display: flex;
+    gap: 4rem; /* Espaço entre os logos */
+    animation: scroll 30s linear infinite;
+}
+
+.logo-scroller .logo-list img {
+    height: 40px; /* Altura padrão para os logos */
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(100%); /* Logos em preto e branco */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.logo-scroller .logo-list img:hover {
+    filter: grayscale(0%); /* Colore o logo ao passar o mouse */
+    opacity: 1;
+}
+/* ======================================= */
+/* ========= ESTILOS PERFORMANCE ========= */
+/* ======================================= */
+
+.performance-section {
+    background-color: #fff;
+    padding: 4rem 0 6rem 0;
+}
+
+.performance-card {
+    background-color: #0d218a; /* Azul escuro */
+    border-radius: 24px;
+    padding: 4rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+}
+
+.performance-content {
+    flex: 0 0 58%;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.performance-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pill { /* Cor de destaque para tags */
+    background-color: #e5e7eb;
+    color: #4b5563;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.partner-logo {
+    height: 30px;
+    filter: brightness(0) invert(1); /* Torna o logo branco */
+}
+
+.performance-content h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    max-width: 90%;
+}
+
+.performance-content .subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.feature-item {
+    background-color: #fff;
+    color: #374151;
+    border-radius: 12px;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.checkmark {
+    color: #6d28d9; /* Roxo/Azul do checkmark */
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.75rem;
+}
+
+.exclusive-discount {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.performance-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: -5%;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.performance-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* Forma circular parcial para a imagem de fundo */
+    clip-path: circle(65% at 40% 50%);
+}
+@media (max-width: 1024px) {
+    /* Performance Section */
+    .performance-card {
+        flex-direction: column;
+        padding: 2rem;
+        min-height: auto;
+    }
+    .performance-content {
+        flex: 1;
+        max-width: 100%;
+        text-align: center;
+    }
+    .performance-header {
+        justify-content: center;
+    }
+    .performance-content h2 {
+        max-width: 100%;
+        font-size: 1.75rem;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    .performance-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        right: 0;
+        order: -1; /* Move a imagem para o topo */
+        margin-bottom: 2rem;
+    }
+    .performance-image-wrapper img {
+        clip-path: circle(50% at 50% 50%); /* Torna a imagem totalmente circular */
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-title {
+        font-size: 1.5rem;
+    }
+    .logo-scroller .logo-list {
+        animation-duration: 20s; /* Acelera o scroll em telas menores */
+    }
+}

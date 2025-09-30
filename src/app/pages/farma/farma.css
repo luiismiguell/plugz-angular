@@ -1,0 +1,156 @@
+/* ======================================== */
+/* ========= ESTILOS PÁGINA Z.FARMA ========= */
+/* ======================================== */
+
+.zfarma-hero-section {
+    background-color: #0d218a;
+    color: #fff;
+    padding-bottom: 10rem;
+    /* Curva na parte inferior */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.zfarma-hero-section .main-header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.zfarma-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.zfarma-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.zfarma-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.zfarma-content .btn {
+    margin-bottom: 1.5rem;
+}
+
+.zfarma-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.zfarma-image-wrapper img {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* Seção de Benefícios (fundo branco) */
+.zfarma-benefits-section {
+    padding: 6rem 0;
+    background-color: #fff;
+    color: var(--primary-blue);
+    text-align: center;
+}
+
+.zfarma-benefits-section h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.benefits-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.benefit-tag-red {
+    display: inline-block;
+    background-color: #ef4444; /* Vermelho */
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.zfarma-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.benefit-item-gray {
+    background-color: #f3f4f6; /* Cinza claro */
+    color: var(--primary-blue);
+    padding: 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.benefit-item-gray strong {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+/* Cor vermelha para o texto "E mais:" na página de farmácia (CTA Final) */
+.final-cta-content h3 strong.red-text {
+    color: #ef4444; /* Vermelho */
+}
+/* Responsividade para Z.Farma */
+@media (max-width: 950px) {
+    .zfarma-hero-section {
+        padding-bottom: 6rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    }
+
+    .zfarma-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .zfarma-content {
+        max-width: 100%;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zfarma-image-wrapper {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+    .zfarma-image-wrapper img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .zfarma-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .zfarma-benefits-grid {
+        /* Muda de 3 colunas para 1 em telas pequenas */
+        grid-template-columns: 1fr;
+    }
+
+    .zfarma-benefits-section h2 {
+        font-size: 1.75rem;
+    }
+}
+
