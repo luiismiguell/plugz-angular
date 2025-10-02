@@ -1,27 +1,22 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { ZBankComponent } from './zbank/zbank.component';
-import { ZFarmaComponent } from './zfarma/zfarma.component';
-import { ZVidaComponent } from './zvida/zvida.component';
-import { ZResidenciaComponent } from './zresidencia/zresidencia.component';
-import { ZProtecaoComponent } from './zprotecao/zprotecao.component';
-import { ZParceirosComponent } from './zparceiros/zparceiros.component';
+import { Routes } from '@angular/router';
+import { QuemSomos } from './pages/quem-somos/quem-somos';
+import { Bank } from './pages/bank/bank';
+import { Farma } from './pages/farma/farma';
+import { Vida } from './pages/vida/vida';
+import { Residencia } from './pages/residencia/residencia';
+import { Protecao } from './pages/protecao/protecao';
+import { Parceiros } from './pages/parceiros/parceiros';
+import { Home } from './pages/home/home';
 
-const routes: Routes = [
-  { path: '', component: QuemSomosComponent },
-  { path: 'quem-somos', component: QuemSomosComponent },
-  { path: 'zbank', component: ZBankComponent },
-  { path: 'zfarma', component: ZFarmaComponent },
-  { path: 'zvida', component: ZVidaComponent },
-  { path: 'zresidencia', component: ZResidenciaComponent },
-  { path: 'zprotecao', component: ZProtecaoComponent },
-  { path: 'zparceiros', component: ZParceirosComponent },
-  { path: '**', redirectTo: '' } // rota fallback
+export const routes: Routes = [
+  { path: '', component: Home },
+  { path: 'home', component: Home },
+  { path: 'quem-somos', component: QuemSomos },
+  { path: 'bank', component: Bank },
+  { path: 'farma', component: Farma },
+  { path: 'vida', component: Vida },
+  { path: 'residencia', component: Residencia },
+  { path: 'protecao', component: Protecao },
+  { path: 'parceiros', component: Parceiros },
+  { path: '**', redirectTo: '' }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

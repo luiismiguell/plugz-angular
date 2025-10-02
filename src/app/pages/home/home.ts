@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  imports: [],
+  templateUrl: './home.html',
+  styleUrl: './home.css'
 })
-export class HomeComponent {
+export class Home {
   // Aqui você pode colocar funções para o modal e carousel
 }
