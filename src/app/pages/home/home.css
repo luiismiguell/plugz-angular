@@ -236,7 +236,7 @@
 .slide-image-wrapper img {
     /* AJUSTE DE TAMANHO DO CARROSSEL */
     max-width: 400px; /* Diminuído de 450px */
-    height: 400px;    /* Diminuído de 450px */
+    height: 400px;/* Diminuído de 450px */
     object-fit: cover;
     clip-path: circle(50% at 50% 50%);
 }
@@ -427,7 +427,7 @@
 .stats-wrapper {
     position: relative;
     /* A altura é determinada pelo conteúdo e posicionamento dos filhos */
-    height: 380px; 
+    height: 380px;
     max-width: 900px;
     /* Centraliza o container na página */
     margin: 0 auto;
