@@ -23,16 +23,24 @@
 
     <nav class="nav-menu">
       <ul>
-        <li><a routerLink="/">Início</a></li>
-        <li><a routerLink="/beneficios">Benefícios</a></li>
-        <li><a routerLink="/quero-ser">Quero ser Plug.Z</a></li>
-        <li><a routerLink="/contato">Contato</a></li>
+        <li><a routerLink="/quem-somos">Quem Somos</a></li>
+        <li class="nav-item-dropdown">
+          <a href="#">Z.benefícios</a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/zbank">Z.Bank</a></li>
+            <li><a routerLink="/zfarma">Z.Farma</a></li>
+            <li><a routerLink="/zvida">Z.Vida</a></li>
+            <li><a routerLink="/zresidencia">Z.Residência</a></li>
+            <li><a routerLink="/zprotecao">Z.Proteção</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/zparceiros">Z.parceiros</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <a routerLink="/login" class="btn btn-outline">Entrar</a>
-      <a routerLink="/quero-ser" class="btn btn-gradient">Assine já</a>
+      <a routerLink="/quero-ser" class="btn btn-outline">Quero ser Plug.Z</a>
+      <a routerLink="/login" class="btn btn-gradient">Fazer Login</a>
     </div>
   </div>
 </header>

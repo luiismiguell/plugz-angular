@@ -74,6 +74,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===============================================
+    // ========= LÓGICA DO CARROSSEL DE DEPOIMENTOS ============
+    // ===============================================
+    
+    const testimonialsCarousel = document.querySelector('.testimonial-carousel');
+    if (testimonialsCarousel) {
+        const track = testimonialsCarousel.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = testimonialsCarousel.querySelector('.next-arrow');
+        const prevButton = testimonialsCarousel.querySelector('.prev-arrow');
+        
+        let currentIndex = 0;
+        
+        const updateTestimonialCarousel = () => {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        };
+        
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateTestimonialCarousel();
+        });
+        
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateTestimonialCarousel();
+        });
+        
+        updateTestimonialCarousel();
+    }
+
+    // ===============================================
     // ========= LÓGICA DO MODAL DE LOGIN (ATUALIZADA) ============
     // ===============================================
     

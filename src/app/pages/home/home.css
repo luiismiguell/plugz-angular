@@ -92,6 +92,7 @@
     line-height: 1.2;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: var(--white);
 }
 .hero-text p {
     font-size: 1.1rem;
@@ -112,6 +113,7 @@
     font-size: 3.5rem;
     font-weight: 700;
     margin: 0.25rem 0;
+    color: var(--white);
 }
 .btn-gradient {
     background-image: linear-gradient(to right, #6D28D9, #4F46E5);
@@ -610,8 +612,10 @@
 
 .testimonials-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 4rem;
+    width: 100%;
+    overflow: hidden;
 }
 
 .testimonial-intro {
@@ -635,6 +639,8 @@
 
 .testimonial-carousel {
     flex: 1;
+    max-width: 65%;
+    overflow: hidden;
 }
 
 .testimonial-slide {
@@ -688,7 +694,7 @@
 }
 
 .testimonial-nav {
-    justify-content: flex-end; /* Alinha as setas à direita */
+    justify-content: center;
     margin-top: 1rem;
 }
 /* ======================================= */
