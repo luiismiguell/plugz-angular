@@ -1,0 +1,174 @@
+/* ======================================= */
+/* ========= CORREÇÕES DE PROPORÇÕES ========= */
+/* ======================================= */
+
+/* 1. CORREÇÃO DO OVERFLOW HORIZONTAL */
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* 2. CORREÇÃO DO CONTAINER PRINCIPAL */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Reduzido de 1280px para melhor proporção */
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Reduzido de 2rem */
+}
+
+/* 3. CORREÇÃO DA ALTURA MÍNIMA DO CONTEÚDO PRINCIPAL */
+.main-content {
+    min-height: calc(100vh - 140px); /* Ajustado para considerar header e footer */
+    width: 100%;
+}
+
+/* 4. CORREÇÃO DAS PROPORÇÕES DO HERO DA HOME */
+.content-wrapper {
+    max-width: 1200px;
+    gap: 3rem; /* Reduzido de 4rem */
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 480px; /* Reduzido de 500px */
+}
+
+.services-grid {
+    flex: 1;
+    max-width: 500px; /* Reduzido de 550px */
+}
+
+/* 5. CORREÇÃO DAS IMAGENS CIRCULARES */
+.slide-image-wrapper img,
+.zbank-image-wrapper img,
+.zfarma-image-wrapper img,
+.zvida-image-wrapper img {
+    width: 100%;
+    max-width: 450px; /* Reduzido de 500px */
+    height: 450px; /* Reduzido de 500px */
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 6. CORREÇÃO DO CARROSSEL */
+.carousel-slide {
+    gap: 2.5rem; /* Reduzido de 3rem */
+    padding: 1rem 1.5rem; /* Reduzido padding */
+}
+
+.slide-content {
+    max-width: 45%; /* Reduzido de 50% */
+}
+
+/* 7. CORREÇÃO DA SEÇÃO DE PERFORMANCE */
+.performance-card {
+    padding: 3rem; /* Reduzido de 4rem */
+    min-height: 420px; /* Reduzido de 480px */
+}
+
+.performance-content {
+    flex: 0 0 55%; /* Reduzido de 58% */
+}
+
+.performance-image-wrapper {
+    width: 45%; /* Reduzido de 50% */
+}
+
+/* 8. CORREÇÃO DAS SEÇÕES DE BENEFÍCIOS */
+.zbank-benefits-wrapper,
+.zfarma-wrapper,
+.zvida-wrapper {
+    gap: 3rem; /* Reduzido de 4rem */
+}
+
+/* 9. CORREÇÃO DO FOOTER */
+.main-footer-wrapper {
+    margin-top: -80px; /* Reduzido de -100px */
+    padding-top: 120px; /* Reduzido de 150px */
+}
+
+/* 10. CORREÇÃO DAS PROPORÇÕES RESPONSIVAS */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+    
+    .content-wrapper {
+        gap: 2rem;
+    }
+    
+    .performance-card {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slide-image-wrapper img,
+    .zbank-image-wrapper img,
+    .zfarma-image-wrapper img,
+    .zvida-image-wrapper img {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .performance-card {
+        min-height: auto;
+        padding: 2rem;
+    }
+    
+    .performance-content {
+        flex: 1;
+        max-width: 100%;
+    }
+    
+    .performance-image-wrapper {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .slide-image-wrapper img,
+    .zbank-image-wrapper img,
+    .zfarma-image-wrapper img,
+    .zvida-image-wrapper img {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .carousel-slide {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .main-footer-wrapper {
+        margin-top: -40px;
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-image-wrapper img,
+    .zbank-image-wrapper img,
+    .zfarma-image-wrapper img,
+    .zvida-image-wrapper img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem; /* Reduzido de 2.5rem */
+    }
+    
+    .price-value {
+        font-size: 2.8rem; /* Reduzido de 3rem */
+    }
+}

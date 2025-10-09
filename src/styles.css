@@ -42,13 +42,14 @@ a {
 /* --- Container Padrão --- */
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1200px; /* Reduzido para melhor proporção */
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem; /* Reduzido para evitar overflow */
 }
 
-body {
-    width: 100vw;
+html, body {
+    width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
 }
 
@@ -144,25 +145,25 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 120px);
-    padding-bottom: 100px;
+    min-height: calc(100vh - 140px); /* Ajustado */
+    padding-bottom: 80px; /* Reduzido */
 }
 .content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem; /* Reduzido */
     width: 100%;
-    max-width: 1280px;
+    max-width: 1200px; /* Reduzido */
     margin: 0 auto;
 }
-.hero-text { flex: 1; max-width: 500px; }
+.hero-text { flex: 1; max-width: 480px; /* Reduzido */ }
 .hero-text h1 { font-size: 3rem; line-height: 1.2; font-weight: 700; margin-bottom: 1rem; }
 .hero-text p { font-size: 1.1rem; color: var(--text-gray); max-width: 450px; margin-bottom: 2rem; }
 .price-section { margin-bottom: 2rem; }
 .price-label, .price-period { display: block; font-size: 1rem; color: var(--text-gray); }
 .price-value { display: block; font-size: 3.5rem; font-weight: 700; margin: 0.25rem 0; }
-.services-grid { flex: 1; max-width: 550px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.services-grid { flex: 1; max-width: 500px; /* Reduzido */ display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .service-card { background-color: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition: background-color 0.3s ease, transform 0.3s ease; }
 .service-card:hover { background-color: rgba(255, 255, 255, 0.1); transform: translateY(-5px); }
 .icon-bg { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
@@ -186,20 +187,20 @@ h1, h2, h3, h4 {
 .carousel-wrapper { position: relative; }
 .carousel-track-container { overflow: hidden; border-radius: 20px; }
 .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
-.carousel-slide { flex: 0 0 100%; display: flex; align-items: center; gap: 3rem; padding: 1rem 2rem; }
-.slide-content { flex: 1; color: var(--primary-blue); max-width: 50%; }
+.carousel-slide { flex: 0 0 100%; display: flex; align-items: center; gap: 2.5rem; /* Reduzido */ padding: 1rem 1.5rem; /* Reduzido */ }
+.slide-content { flex: 1; color: var(--primary-blue); max-width: 45%; /* Reduzido */ }
 .service-tag { display: inline-flex; align-items: center; gap: 0.5rem; background-color: #f3f4f6; color: #6b7280; padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500; margin-bottom: 1.5rem; }
 .service-tag svg { width: 16px; height: 16px; }
 .slide-content h2 { font-size: 2rem; font-weight: 700; line-height: 1.3; margin-bottom: 1rem; }
 .slide-content p { color: #4b5563; font-size: 1rem; margin-bottom: 2rem; }
 .slide-image-wrapper { flex: 1; display: flex; justify-content: center; align-items: center; }
 .slide-image-wrapper img {
-    max-width: 400px;
-    height: 400px;
+    max-width: 350px; /* Reduzido */
+    height: 350px; /* Reduzido */
     object-fit: cover;
     clip-path: circle(50% at 50% 50%);
 }
-.carousel-nav { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.carousel-nav { display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center; padding: 0 1rem; }
 .carousel-arrow { background: none; border: none; cursor: pointer; color: var(--accent-blue); padding: 0.5rem; }
 .carousel-arrow:hover { color: var(--primary-blue); }
 
@@ -259,15 +260,15 @@ h1, h2, h3, h4 {
 .performance-card {
     background-color: #0d218a;
     border-radius: 24px;
-    padding: 4rem;
+    padding: 3rem; /* Reduzido */
     display: flex;
     position: relative;
     overflow: hidden;
-    min-height: 480px;
+    min-height: 420px; /* Reduzido */
 }
 
 .performance-content {
-    flex: 0 0 58%;
+    flex: 0 0 55%; /* Reduzido */
     color: #fff;
     position: relative;
     z-index: 2;
@@ -300,6 +301,7 @@ h1, h2, h3, h4 {
     line-height: 1.3;
     margin-bottom: 1rem;
     max-width: 90%;
+    color: #fff;
 }
 
 .performance-content .subtitle {
@@ -341,7 +343,7 @@ h1, h2, h3, h4 {
     top: 0;
     right: -5%;
     bottom: 0;
-    width: 50%;
+    width: 45%; /* Reduzido */
     z-index: 1;
 }
 
@@ -452,6 +454,7 @@ h1, h2, h3, h4 {
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 3rem;
+    color: #fff;
 }
 
 .environment-stats {
@@ -542,17 +545,17 @@ h1, h2, h3, h4 {
 
 .testimonials-section {
     background-color: #f8f9fa;
-    padding: 6rem 0;
+    padding: 5rem 0;
 }
 
 .testimonials-wrapper {
     display: flex;
-    align-items: center;
-    gap: 4rem;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .testimonial-intro {
-    flex: 0 0 35%;
+    flex: 0 0 30%; /* Reduzido de 35% */
     color: var(--primary-blue);
 }
 
@@ -561,8 +564,8 @@ h1, h2, h3, h4 {
 }
 
 .testimonial-intro h2 {
-    font-size: 2.25rem;
-    line-height: 1.4;
+    font-size: 2rem; /* Reduzido */
+    line-height: 1.3; /* Reduzido */
     font-weight: 500;
 }
 
@@ -572,6 +575,7 @@ h1, h2, h3, h4 {
 
 .testimonial-carousel {
     flex: 1;
+    min-height: 320px;
 }
 
 .testimonial-slide {
@@ -583,18 +587,22 @@ h1, h2, h3, h4 {
     background-color: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 1.5rem;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .quote-icon {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem; /* Reduzido */
 }
 
 .testimonial-quote {
     color: var(--accent-blue);
-    font-size: 1.25rem;
+    font-size: 1.1rem; /* Reduzido */
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.4; /* Reduzido */
     margin-bottom: 1rem;
 }
 
@@ -604,15 +612,16 @@ h1, h2, h3, h4 {
 
 .testimonial-body {
     color: #4b5563;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    font-size: 0.85rem; /* Reduzido */
+    line-height: 1.5; /* Reduzido */
+    margin-bottom: 1.5rem; /* Reduzido */
+    flex-grow: 1; /* Permite crescer para preencher espaço */
 }
 
 .testimonial-author {
     color: var(--primary-blue);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.85rem; /* Reduzido */
+    line-height: 1.4; /* Reduzido */
 }
 
 .testimonial-author strong {
@@ -625,8 +634,9 @@ h1, h2, h3, h4 {
 }
 
 .testimonial-nav {
-    justify-content: flex-end;
-    margin-top: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0 2rem; /* Adiciona padding para manter setas dentro do espaço */
 }
 
 /* ======================================= */
@@ -652,7 +662,7 @@ h1, h2, h3, h4 {
 .zbank-wrapper {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem; /* Reduzido */
 }
 
 .zbank-content {
@@ -717,8 +727,8 @@ h1, h2, h3, h4 {
 
 .zbank-image-wrapper img {
     width: 100%;
-    max-width: 500px;
-    height: 500px;
+    max-width: 450px; /* Reduzido */
+    height: 450px; /* Reduzido */
     object-fit: cover;
     border-radius: 50%;
 }
@@ -732,7 +742,7 @@ h1, h2, h3, h4 {
 .zbank-benefits-wrapper {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem; /* Reduzido */
 }
 
 .zbank-benefits-content {
@@ -880,7 +890,7 @@ h1, h2, h3, h4 {
 .zfarma-wrapper {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem; /* Reduzido */
 }
 
 .zfarma-content {
@@ -908,8 +918,8 @@ h1, h2, h3, h4 {
 
 .zfarma-image-wrapper img {
     width: 100%;
-    max-width: 500px;
-    height: 500px;
+    max-width: 450px; /* Reduzido */
+    height: 450px; /* Reduzido */
     object-fit: cover;
     border-radius: 50%;
 }
@@ -993,7 +1003,7 @@ h1, h2, h3, h4 {
 .zvida-wrapper {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem; /* Reduzido */
 }
 
 .zvida-content {
@@ -1101,8 +1111,8 @@ h1, h2, h3, h4 {
     background-color: #0b157a;
     color: #fff;
     clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
-    margin-top: -100px;
-    padding-top: 150px;
+    margin-top: -80px; /* Reduzido */
+    padding-top: 120px; /* Reduzido */
     position: relative;
     z-index: 5;
 }
@@ -1204,9 +1214,9 @@ h1, h2, h3, h4 {
 @media (max-width: 1024px) {
     /* Home */
     .content-wrapper { flex-direction: column; text-align: center; gap: 2rem; }
-    .main-content { height: auto; padding: 4rem 0; }
+    .main-content { height: auto; padding: 3rem 0; /* Reduzido */ }
     .hero-text { max-width: 100%; display: flex; flex-direction: column; align-items: center; }
-    .services-grid { max-width: 600px; width: 100%; }
+    .services-grid { max-width: 500px; /* Reduzido */ width: 100%; }
 
     /* Performance */
     .performance-card {
@@ -1228,7 +1238,7 @@ h1, h2, h3, h4 {
     .performance-image-wrapper {
         position: relative;
         width: 100%;
-        height: 350px;
+        height: 300px; /* Reduzido */
         right: 0;
         order: -1;
         margin-bottom: 2rem;
@@ -1276,7 +1286,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 950px) {
-    .container { padding: 0 1.5rem; }
+    .container { padding: 0 1rem; /* Reduzido */ }
 
     /* Z.Bank, Z.Farma, Z.Vida Heros */
     .zbank-hero-section, .zfarma-hero-section, .zvida-hero-section {
@@ -1300,8 +1310,8 @@ h1, h2, h3, h4 {
         justify-content: center;
     }
     .zbank-image-wrapper img, .zfarma-image-wrapper img, .zvida-image-wrapper img {
-        width: 300px;
-        height: 300px;
+        width: 350px; /* Aumentado ligeiramente */
+        height: 350px;
     }
     .zbank-content h2, .zfarma-content h2, .zvida-content h2 {
         font-size: 2.5rem;
@@ -1326,8 +1336,8 @@ h1, h2, h3, h4 {
     /* Rodapé */
     .main-footer-wrapper {
         clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
-        margin-top: -50px;
-        padding-top: 80px;
+        margin-top: -40px; /* Reduzido */
+        padding-top: 70px; /* Reduzido */
     }
     .footer-grid {
         grid-template-columns: 1fr;
@@ -1354,16 +1364,37 @@ h1, h2, h3, h4 {
     .carousel-slide { flex-direction: column; text-align: center; gap: 2rem; }
     .slide-content { max-width: 100%; order: 2; display: flex; flex-direction: column; align-items: center; }
     .slide-image-wrapper { order: 1; }
-    .slide-image-wrapper img { width: 300px; height: 300px; }
+    .slide-image-wrapper img { width: 280px; /* Reduzido */ height: 280px; }
     .carousel-nav { justify-content: center; }
+    
+    /* Depoimentos */
+    .testimonials-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    .testimonial-intro {
+        flex: none;
+        max-width: 100%;
+    }
+    .testimonial-carousel {
+        min-height: 320px;
+    }
+    .testimonial-card {
+        min-height: 300px;
+        padding: 1.5rem;
+    }
+    .testimonial-nav {
+        padding: 0 0.5rem;
+    }
 }
 
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero-text h1 { font-size: 2.5rem; }
-    .price-value { font-size: 3rem; }
+    .hero-text h1 { font-size: 2.2rem; /* Reduzido */ }
+    .price-value { font-size: 2.8rem; /* Reduzido */ }
     .services-grid { grid-template-columns: 1fr; }
-    .partners-title { font-size: 1.5rem; }
+    .partners-title { font-size: 1.4rem; /* Reduzido */ }
     .logo-scroller .logo-list { animation-duration: 20s; }
     .footer-cta-content, .footer-bottom {
         flex-direction: column;
@@ -1371,9 +1402,66 @@ h1, h2, h3, h4 {
         text-align: center;
     }
     .zfarma-benefits-grid { grid-template-columns: 1fr; }
-    .zfarma-benefits-section h2 { font-size: 1.75rem; }
+    .zfarma-benefits-section h2 { font-size: 1.6rem; /* Reduzido */ }
+    .slide-image-wrapper img,
+    .zbank-image-wrapper img,
+    .zfarma-image-wrapper img,
+    .zvida-image-wrapper img {
+        width: 280px;
+        height: 280px;
+    }
+    
+    /* Depoimentos mobile */
+    .testimonial-intro h2 {
+        font-size: 1.6rem;
+    }
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+    .testimonial-body {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 640px) {
     .benefits-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 0.75rem; }
+    
+    .slide-image-wrapper img,
+    .zbank-image-wrapper img,
+    .zfarma-image-wrapper img,
+    .zvida-image-wrapper img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .hero-text h1 { font-size: 2rem; }
+    .price-value { font-size: 2.5rem; }
+    
+    .carousel-slide {
+        gap: 1.5rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    .performance-card { padding: 1.5rem; }
+    
+    .main-footer-wrapper {
+        margin-top: -30px;
+        padding-top: 60px;
+    }
+    
+    /* Depoimentos muito pequenos */
+    .testimonials-section {
+        padding: 3rem 0;
+    }
+    .testimonial-card {
+        min-height: 280px;
+        padding: 1.25rem;
+    }
+    .testimonial-intro h2 {
+        font-size: 1.4rem;
+    }
 }

@@ -44,9 +44,9 @@ a {
 /* --- Container Padrão --- */
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1200px; /* Reduzido para melhor proporção */
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem; /* Reduzido para evitar overflow */
 }
 /* ======================================= */
 /* ========= UTILITIES E BOTÕES ========== */
@@ -146,7 +146,7 @@ h1, h2, h3, h4 {
 /* --- MAIN CONTENT --- */
 .main-content {
     /* Altura mínima para garantir que o footer esteja sempre no final da tela */
-    min-height: calc(100vh - 200px); /* Ajuste com base na altura do seu header e footer */
+    min-height: calc(100vh - 140px); /* Ajustado para melhor proporção */
     position: relative;
     z-index: 10;
 }
@@ -157,8 +157,8 @@ h1, h2, h3, h4 {
     background-color: #0b157a;
     color: #fff;
     clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
-    margin-top: -100px;
-    padding-top: 150px;
+    margin-top: -80px; /* Reduzido */
+    padding-top: 120px; /* Reduzido */
     position: relative;
     z-index: 5;
 }
@@ -168,14 +168,14 @@ h1, h2, h3, h4 {
 
 @media (max-width: 950px) {
     .container {
-        padding: 0 1.5rem;
+        padding: 0 1rem; /* Reduzido */
     }
 
     /* Footer */
     .main-footer-wrapper {
         clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
-        margin-top: -50px;
-        padding-top: 80px;
+        margin-top: -40px; /* Reduzido */
+        padding-top: 70px; /* Reduzido */
     }
     .footer-grid {
         grid-template-columns: 1fr;
