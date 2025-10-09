@@ -153,16 +153,18 @@ h1, h2, h3, h4 {
     top: 100%;
     left: 0;
     background-color: var(--primary-blue);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    min-width: 180px;
+    min-width: 160px;
     z-index: 100;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0.5rem;
 }
 
 .nav-item-dropdown:hover .dropdown-menu {
@@ -177,23 +179,25 @@ h1, h2, h3, h4 {
 
 .dropdown-menu a {
     display: block;
-    padding: 0.1rem 1rem;
+    padding: 0.25rem 1rem;
     color: var(--text-gray);
     font-weight: 500;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .dropdown-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
     color: var(--white);
+    transform: translateX(5px);
 }
 
 .dropdown-menu li:first-child a {
-    border-radius: 8px 8px 0 0;
+    border-radius: 6px 6px 0 0;
 }
 
 .dropdown-menu li:last-child a {
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 6px 6px;
 }
 
 /* --- MAIN CONTENT --- */
@@ -210,10 +214,75 @@ h1, h2, h3, h4 {
     background-color: #0b157a;
     color: #fff;
     clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
-    margin-top: -80px; /* Reduzido */
-    padding-top: 120px; /* Reduzido */
+    margin-top: -80px;
+    padding-top: 150px;
     position: relative;
     z-index: 5;
+}
+
+.footer-cta-section {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cta-text h3 {
+    color: #fff !important;
+}
+
+.footer-column h4 {
+    color: #fff !important;
+}
+
+.footer-main {
+    padding: 5rem 0 3rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-description {
+    max-width: 350px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-top: 1rem;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
 }
 /* ======================================= */
 /* ========= RESPONSIVIDADE GERAL ======== */
@@ -227,8 +296,8 @@ h1, h2, h3, h4 {
     /* Footer */
     .main-footer-wrapper {
         clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
-        margin-top: -40px; /* Reduzido */
-        padding-top: 70px; /* Reduzido */
+        margin-top: -40px;
+        padding-top: 100px;
     }
     .footer-grid {
         grid-template-columns: 1fr;

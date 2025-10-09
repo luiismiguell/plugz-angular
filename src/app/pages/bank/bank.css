@@ -12,6 +12,7 @@
 .zvida-hero-section {
     background-color: #0d218a;
     color: #fff;
+    padding-top: 4rem;
     padding-bottom: 10rem;
     /* Curva na parte inferior (clip-path) */
     clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -108,14 +109,20 @@
 /* ============================================= */
 
 .zbank-benefits-section {
-    padding: 6rem 0;
     background-color: #fff;
+    padding: 6rem 0;
+    margin-top: -1px;
+    position: relative;
+    z-index: 5;
 }
 
 .zbank-benefits-wrapper {
     display: flex;
     align-items: center;
     gap: 4rem;
+    padding: 0 2rem;
+    margin: 0;
+    border: none;
 }
 
 .zbank-benefits-content {
@@ -237,8 +244,8 @@
 /* ======================================= */
 
 .zbank-card-section {
-    padding: 6rem 0;
-    background-color: #f8f9fa; /* Fundo cinza bem claro */
+    padding: 4rem 0 6rem 0;
+    background-color: #f8f9fa;
     text-align: center;
 }
 
@@ -259,10 +266,10 @@
 .card-image-area img {
     width: 100%;
     max-width: 450px;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
-    /* Forma de "folha" ou "escudo" */
-    clip-path: path('M 225,500 C 380,500 450,388.07 450,250 C 450,111.93 380,0 225,0 C 70,0 0,111.93 0,250 C 0,388.07 70,500 225,500 Z');
+    object-position: center;
+    border-radius: 20px;
 }
 
 .card-benefits-content {

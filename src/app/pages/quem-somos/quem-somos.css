@@ -2,6 +2,50 @@
 /* ========= ESTILOS PÁGINA QUEM SOMOS ========= */
 /* ======================================= */
 
+.quemsomos-page-container {
+    background-color: #fff;
+}
+
+.quemsomos-hero-section {
+    background-color: #0d218a;
+    color: #fff;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.quemsomos-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.quemsomos-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.quemsomos-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.quemsomos-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.quemsomos-image-wrapper img {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .about-page-container {
     background-color: #fff;
     color: var(--primary-blue);

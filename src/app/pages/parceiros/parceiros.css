@@ -2,6 +2,51 @@
 /* ========= ESTILOS PARCEIROS ======== */
 /* ==================================== */
 
+.zparceiros-page-container {
+    background-color: #fff;
+}
+
+.zparceiros-hero-section {
+    background-color: #0d218a;
+    color: #fff;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.zparceiros-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.zparceiros-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.zparceiros-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.zparceiros-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.zparceiros-image-wrapper img {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .partners-section {
     background-color: #fff;
     padding: 4rem 0 6rem 0; /* Espaçamento vertical */

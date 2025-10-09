@@ -2,9 +2,10 @@
 /* ========= ESTILOS PÁGINA Z.RESIDÊNCIA ========= */
 /* ============================================== */
 
-.residencia-hero-section {
+.zresidencia-hero-section {
     background-color: #0d218a;
     color: #fff;
+    padding-top: 4rem;
     padding-bottom: 10rem;
     /* Curva na parte inferior */
     clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);

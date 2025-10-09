@@ -15,7 +15,7 @@
 
 /* --- Seção de CTA (Cadastre-se) --- */
 .footer-cta-section {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -38,14 +38,14 @@
 
 /* --- Rodapé Principal (Conteúdo) --- */
 .footer-main {
-    padding: 4rem 0 2rem 0;
+    padding: 5rem 0 3rem 0;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr; /* Colunas: Descrição | CTA | Contato */
-    gap: 2rem;
-    padding-bottom: 3rem;
+    gap: 3rem;
+    padding-bottom: 4rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -55,9 +55,10 @@
 
 .footer-description {
     max-width: 350px;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.7;
     opacity: 0.8;
+    margin-top: 1rem;
 }
 
 .footer-column h4 {
@@ -91,7 +92,7 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     padding-left: 0;
 }
 
@@ -113,8 +114,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2rem;
-    font-size: 0.8rem;
+    padding-top: 3rem;
+    font-size: 0.85rem;
     opacity: 0.7;
 }
 

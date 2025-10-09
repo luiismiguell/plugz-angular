@@ -2,6 +2,10 @@
 /* ========= ESTILOS PÁGINA QUERO SER Z ========= */
 /* ========================================= */
 
+.page-assine {
+    padding-top: 4rem;
+}
+
 .onboarding-page-container {
     background-color: #fff;
     min-height: 100vh;
