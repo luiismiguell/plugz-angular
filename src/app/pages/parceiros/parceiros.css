@@ -238,11 +238,259 @@
     }
 }
 
+/* ======================================= */
+/* ========= ESTILOS SEÇÃO SEGUROS ======== */
+/* ======================================= */
+
+.insurance-section {
+    background-color: #fff;
+    padding: 6rem 0;
+}
+
+.insurance-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 4rem;
+}
+
+.insurance-image-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.insurance-image-area img {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: scale(1.5);
+}
+
+.insurance-content {
+    flex: 1;
+    max-width: 550px;
+    color: var(--primary-blue);
+}
+
+.insurance-content h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: var(--primary-blue);
+}
+
+.insurance-content p {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.insurance-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.benefit-item-gray {
+    background-color: #f3f4f6;
+    color: var(--primary-blue);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.benefit-item-gray:hover {
+    background-color: #e5e7eb;
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.benefit-tag-blue {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* ======================================= */
+/* ========= ESTILOS CTA FINAL ============ */
+/* ======================================= */
+
+.final-cta-section {
+    background-color: #f8f9fa;
+    padding: 6rem 0;
+}
+
+.final-cta-card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.final-cta-content {
+    color: var(--primary-blue);
+}
+
+.final-cta-content h3 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.final-cta-content h3 strong.purple-text {
+    font-weight: 700;
+    color: #a78bfa;
+}
+
+.final-cta-content p {
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.price-bubble {
+    background-color: #0d218a;
+    color: #fff;
+    border-radius: 999px;
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0% 50%, 20% 0%, 100% 0%, 100% 100%, 20% 100%);
+}
+
+.price-bubble .price-label,
+.price-bubble .price-period {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.price-bubble .price-value {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 0.5rem 0;
+    font-weight: 300;
+}
+
+.price-bubble .price-value strong {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+/* ======================================= */
+/* ========= RESPONSIVIDADE =============== */
+/* ======================================= */
+
+@media (max-width: 1024px) {
+    /* Insurance Section */
+    .insurance-wrapper {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    .insurance-content {
+        max-width: 100%;
+        order: 2;
+    }
+    .insurance-image-area {
+        order: 1;
+    }
+    .insurance-content h2 {
+        font-size: 2rem;
+    }
+    .insurance-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .partners-title {
         font-size: 1.5rem;
     }
     .logo-scroller .logo-list {
         animation-duration: 20s; /* Acelera o scroll em telas menores */
+    }
+    
+    /* Insurance Section Mobile */
+    .insurance-section {
+        padding: 4rem 0;
+    }
+    .insurance-wrapper {
+        gap: 2rem;
+    }
+    .insurance-image-area img {
+        height: 300px;
+    }
+    .insurance-content h2 {
+        font-size: 1.75rem;
+    }
+    .insurance-content p {
+        font-size: 0.95rem;
+    }
+    
+    /* Final CTA Mobile */
+    .final-cta-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .price-bubble {
+        clip-path: none;
+        border-radius: 20px;
+    }
+    .final-cta-content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .insurance-section {
+        padding: 3rem 0;
+    }
+    .insurance-image-area img {
+        height: 250px;
+        border-radius: 15px;
+    }
+    .insurance-content h2 {
+        font-size: 1.5rem;
+    }
+    .benefit-item-gray {
+        padding: 1rem;
+        font-size: 0.9rem;
+        min-height: 70px;
+    }
+    .final-cta-card {
+        padding: 1.5rem;
+    }
+    .final-cta-content h3 {
+        font-size: 1.25rem;
     }
 }
