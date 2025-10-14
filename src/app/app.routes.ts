@@ -6,6 +6,8 @@ import { Vida } from './pages/vida/vida';
 import { Residencia } from './pages/residencia/residencia';
 import { Protecao } from './pages/protecao/protecao';
 import { Parceiros } from './pages/parceiros/parceiros';
+import { Politica } from './pages/politica/politica';
+import { QueroSer } from './pages/quero-ser/quero-ser';
 import { Home } from './pages/home/home';
 
 export const routes: Routes = [
@@ -18,5 +20,7 @@ export const routes: Routes = [
   { path: 'residencia', component: Residencia },
   { path: 'protecao', component: Protecao },
   { path: 'parceiros', component: Parceiros },
+  { path: 'politica', component: Politica },
+  { path: 'quero-ser', component: QueroSer },
   { path: '**', redirectTo: '' }
 ];

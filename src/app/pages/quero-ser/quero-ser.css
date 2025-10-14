@@ -1,261 +1,99 @@
-/* ========================================= */
-/* ========= ESTILOS PÁGINA QUERO SER Z ========= */
-/* ========================================= */
-
-.page-assine {
-    padding-top: 4rem;
+.quero-ser-main {
+    padding: 4rem 0 2rem 0;
+    background-color: #0d218a;
+    min-height: calc(100vh - 200px);
 }
 
-.onboarding-page-container {
-    background-color: #fff;
-    min-height: 100vh;
-}
-
-/* --- Hero Section --- */
-.onboarding-hero-section {
-    background-color: #0d218a; /* Azul principal */
-    color: #fff;
-    padding: 6rem 0 4rem 0;
-    text-align: center;
-}
-
-.onboarding-hero-section h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.onboarding-hero-section p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* --- Curva Invertida na Transição --- */
-.onboarding-main-content {
-    background-color: #fff;
-    position: relative;
-    z-index: 10;
-    /* Curva para encaixar com a seção de hero azul (opcional, se houver imagem/curva no hero) */
-    /* Se o Hero azul tiver curva, esta seção precisa de uma margem ou padding top */
-    margin-top: -50px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-/* --- Seção Principal de Conteúdo e Formulário --- */
-.onboarding-form-section {
-    padding: 4rem 0 6rem 0;
-}
-
-.form-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e5e7eb;
-}
-
-/* --- Indicador de Progresso (Passos) --- */
-.progress-bar {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    padding: 0 1rem;
-}
-
-.progress-step {
-    flex: 1;
-    text-align: center;
-    position: relative;
-    color: #9ca3af;
-    font-size: 0.9rem;
-}
-
-.step-number {
-    width: 30px;
-    height: 30px;
-    background-color: #e5e7eb;
-    color: #fff;
-    border-radius: 50%;
+.two-column-layout {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto 0.5rem auto;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    z-index: 2;
-    position: relative;
+    gap: 4rem;
+    min-height: 50vh;
+    margin-bottom: 3rem;
 }
 
-/* Linha de conexão entre os passos */
-.progress-step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 14px;
-    left: 50%;
-    width: 100%;
-    height: 2px;
-    background-color: #e5e7eb;
-    z-index: 1;
-    transform: translateX(5px);
+.left-column {
+    flex: 1;
+    text-align: left;
 }
 
-/* Estilos para o passo ATIVO */
-.progress-step.active .step-number {
-    background-color: var(--accent-blue); /* Azul de destaque */
-}
-.progress-step.active {
-    color: var(--primary-blue);
-}
-
-/* Estilos para o passo CONCLUÍDO */
-.progress-step.completed .step-number {
-    background-color: #10b981; /* Verde de sucesso */
-}
-.progress-step.completed:not(:last-child)::after {
-    background-color: #10b981;
-}
-
-/* --- Blocos do Formulário (Etapas) --- */
-.form-step {
-    display: none; /* Esconde todas as etapas por padrão */
-}
-.form-step.active {
-    display: block; /* Mostra apenas a etapa ativa */
-}
-
-.form-step h2 {
-    font-size: 2rem;
+.left-column h1 {
+    font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #fff;
     margin-bottom: 2rem;
-    text-align: center;
 }
 
-/* --- Campos de Input --- */
-.form-group {
+.vertical-divider {
+    width: 2px;
+    height: 300px;
+    background-color: #fff;
+    opacity: 0.3;
+}
+
+.right-column {
+    flex: 1;
+    text-align: left;
+}
+
+.price-section {
+    margin: 2rem 0;
+}
+
+.price-label {
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.price-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+}
+
+.price-period {
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+.activation-note {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.right-column h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
     margin-bottom: 1.5rem;
 }
 
-.form-group label {
-    display: block;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #1f2937;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    border-color: var(--accent-blue);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-}
-
-/* --- Botões de Navegação (Próximo/Anterior) --- */
-.form-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-}
-
-.btn-prev {
-    background-color: #f3f4f6;
-    color: #4b5563;
-}
-.btn-prev:hover {
-    background-color: #e5e7eb;
-}
-
-.btn-next,
-.btn-submit {
-    background-color: var(--accent-blue);
-    color: #fff;
-    font-weight: 600;
-}
-.btn-next:hover,
-.btn-submit:hover {
-    background-color: #2563eb;
-}
-
-/* --- Termos e Condições (Checkbox) --- */
-.terms-checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-size: 0.9rem;
-    color: #4b5563;
-    margin-top: 1.5rem;
-    text-align: left;
-}
-.terms-checkbox input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-top: 2px;
-}
-.terms-checkbox a {
-    color: var(--accent-blue);
-    text-decoration: none;
-    font-weight: 500;
-}
-.terms-checkbox a:hover {
-    text-decoration: underline;
-}
 @media (max-width: 768px) {
-    .onboarding-hero-section {
-        padding: 4rem 0 3rem 0;
-    }
-    .onboarding-hero-section h1 {
-        font-size: 2.5rem;
-    }
-    .onboarding-main-content {
-        margin-top: -30px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-    }
-
-    .form-wrapper {
-        padding: 1.5rem;
-        margin: 0 1rem;
-    }
-
-    /* Reduz o progresso em telas menores */
-    .progress-bar {
-        margin-bottom: 2rem;
-    }
-    .progress-step span { /* Esconde o texto da etapa */
-        display: none;
-    }
-    .progress-step .step-number {
-        margin-bottom: 0.25rem;
-    }
-    .progress-step:not(:last-child)::after {
-        top: 14px;
-    }
-
-    .form-step h2 {
-        font-size: 1.5rem;
-    }
-
-    .form-navigation {
+    .two-column-layout {
         flex-direction: column;
-        gap: 1rem;
+        gap: 3rem;
     }
-    .btn-prev, .btn-next, .btn-submit {
-        width: 100%;
-        text-align: center;
+    
+    .vertical-divider {
+        width: 200px;
+        height: 2px;
+    }
+    
+    .left-column h1 {
+        font-size: 2rem;
+    }
+    
+    .price-value {
+        font-size: 2.5rem;
     }
 }
