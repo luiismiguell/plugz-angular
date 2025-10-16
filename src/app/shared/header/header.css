@@ -16,7 +16,8 @@
 }
 
 /* --- Logo --- */
-.logo svg {
+.logo svg,
+.logo img {
     display: block;
 }
 

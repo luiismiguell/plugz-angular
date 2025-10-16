@@ -5,19 +5,7 @@
   <div class="container header-content">
     <div class="logo">
       <a routerLink="/">
-        <svg width="112" height="36" viewBox="0 0 112 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="logo-gradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#5B21B6"/>
-              <stop offset="100%" stop-color="#4ADE80"/>
-            </linearGradient>
-          </defs>
-          <text x="0" y="27" font-family="Poppins, sans-serif" font-size="28" font-weight="500" fill="white">plug</text>
-          <g transform="translate(72 0)">
-            <rect width="36" height="36" rx="10" fill="url(#logo-gradient)"/>
-            <text x="9" y="27" font-family="Poppins, sans-serif" font-size="24" font-weight="700" fill="white">Z</text>
-          </g>
-        </svg>
+        <img src="assets/imgs/index/logo-plugz.png" alt="Plugz Logo" width="112" height="36">
       </a>
     </div>
 
@@ -27,20 +15,20 @@
         <li class="nav-item-dropdown">
           <a href="#">Z.benefícios</a>
           <ul class="dropdown-menu">
-            <li><a routerLink="/zbank">Z.Bank</a></li>
-            <li><a routerLink="/zfarma">Z.Farma</a></li>
-            <li><a routerLink="/zvida">Z.Vida</a></li>
-            <li><a routerLink="/zresidencia">Z.Residência</a></li>
-            <li><a routerLink="/zprotecao">Z.Proteção</a></li>
+            <li><a routerLink="/bank">Z.Bank</a></li>
+            <li><a routerLink="/farma">Z.Farma</a></li>
+            <li><a routerLink="/vida">Z.Vida</a></li>
+            <li><a routerLink="/residencia">Z.Residência</a></li>
+            <li><a routerLink="/protecao">Z.Proteção</a></li>
           </ul>
         </li>
-        <li><a routerLink="/zparceiros">Z.parceiros</a></li>
+        <li><a routerLink="/parceiros">Z.parceiros</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
       <a routerLink="/quero-ser" class="btn btn-outline">Quero ser Plug.Z</a>
-      <a routerLink="/login" class="btn btn-gradient">Fazer Login</a>
+      <a routerLink="/quero-ser" class="btn btn-gradient">Fazer Login</a>
     </div>
   </div>
 </header>
@@ -60,7 +48,7 @@
         <h3>Cadastre-se!</h3>
         <p>Fique por dentro de todos os benefícios e conteúdos que a Plug.z oferece!</p>
       </div>
-      <button class="btn btn-solid">INSCREVER-SE</button>
+      <a routerLink="/quero-ser" class="btn btn-solid">INSCREVER-SE</a>
     </div>
   </div>
 
@@ -113,7 +101,7 @@
 
     <div class="container footer-bottom">
       <span>Plug.z © 2024 - Direitos reservados</span>
-      <a routerLink="/politica-privacidade">Política de Privacidade</a>
+      <a routerLink="/politica">Política de Privacidade</a>
     </div>
   </div>
 </footer>

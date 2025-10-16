@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-bank',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './bank.html',
   styleUrl: './bank.css'
 })

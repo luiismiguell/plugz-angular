@@ -89,7 +89,7 @@ html, body {
     background-color: var(--text-gray);
 }
 .btn-gradient {
-    background-image: linear-gradient(to right, #6D28D9, #4F46E5);
+    background-image: linear-gradient(to right, #8B7EFF 0%, #A78BFA 25%, #67E8F9 75%, #6EE7B7 100%);
     color: var(--white);
     border: none;
     font-size: 1rem;

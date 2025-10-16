@@ -1,8 +1,9 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-quem-somos',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './quem-somos.html',
   styleUrl: './quem-somos.css'
 })
